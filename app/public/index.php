@@ -1,3 +1,4 @@
 <?php
-
+// @codeCoverageIgnoreStart
 phpinfo();
+// @codeCoverageIgnoreEnd
