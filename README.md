@@ -23,4 +23,4 @@ $ sam build
 $ sam deploy --guided
 ```
 
-Open `URL` in a browser
+Open the URL listed in Sam's Output(API Gateway endpoint URL) in a browser.
