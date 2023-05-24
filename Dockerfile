@@ -11,4 +11,5 @@ COPY bootstrap /opt/bootstrap
 COPY app /var/task/app
 WORKDIR /var/task/app
 
+USER nobody
 ENTRYPOINT /opt/bootstrap
