@@ -1,0 +1,9 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "my-lambda-php"
+resolve_s3 = true
+s3_prefix = "my-lambda-php"
+region = "ap-northeast-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["Function=279038906342.dkr.ecr.ap-northeast-1.amazonaws.com/mylambdaphp2b60497f/function86408593repo"]
