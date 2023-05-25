@@ -54,6 +54,12 @@ Resources:
       DockerContext: ./
       Dockerfile: Dockerfile
 
+  MyFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/lambda/${Function}'
+      RetentionInDays: 30
+
 Outputs:
   URL:
     Description: "API Gateway endpoint URL for Prod stage for PHP application"
