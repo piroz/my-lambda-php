@@ -14,6 +14,8 @@ Resources:
   ApiGatewayApi:
     Type: AWS::Serverless::Api
     Properties:
+      Auth:
+        ApiKeyRequired: true
       EndpointConfiguration:
         Type: REGIONAL
       StageName: Prod
