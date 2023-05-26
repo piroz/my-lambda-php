@@ -5,9 +5,11 @@
  */
 
 import axios from 'axios';
+// @codeCoverageIgnoreStart
 window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+// @codeCoverageIgnoreEnd
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
