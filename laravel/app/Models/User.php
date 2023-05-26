@@ -1,5 +1,7 @@
 <?php
 
+// @Generated
+
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;

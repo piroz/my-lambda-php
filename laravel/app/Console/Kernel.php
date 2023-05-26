@@ -1,5 +1,7 @@
 <?php
 
+// @Generated
+
 namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;

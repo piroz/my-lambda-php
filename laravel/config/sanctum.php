@@ -1,5 +1,7 @@
 <?php
 
+// @Generated
+
 use Laravel\Sanctum\Sanctum;
 
 return [

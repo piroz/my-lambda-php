@@ -1,5 +1,7 @@
 <?php
 
+// @Generated
+
 use Illuminate\Support\Facades\Broadcast;
 
 /*
