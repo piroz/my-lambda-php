@@ -24,6 +24,11 @@ jobs:
         run: composer update --no-ansi --no-interaction --no-progress
         working-directory: ./laravel
 
+      - name: Copy .env
+        shell: bash
+        working-directory: ./laravel
+        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+
       - name: Setup laravel app
         shell: bash
         working-directory: ./laravel
