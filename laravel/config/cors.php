@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['a9obajxqtc.execute-api.ap-northeast-1.amazonaws.com'], // ここを変更
 
     'allowed_origins_patterns' => [],
 
