@@ -13,6 +13,37 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Setup PHP with Xdebug
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          coverage: xdebug
+            
+      - name: Install dependencies with composer
+        shell: bash
+        run: composer update --no-ansi --no-interaction --no-progress
+        working-directory: ./laravel
+
+      - name: Copy .env
+        shell: bash
+        working-directory: ./laravel
+        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+      - name: Setup laravel app
+        shell: bash
+        working-directory: ./laravel
+        run: php artisan key:generate
+
+      - name: Run tests with phpunit/phpunit
+        shell: bash
+        working-directory: ./laravel
+        run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
+
+      - name: Fix code coverage paths
+        shell: bash
+        working-directory: ./laravel
+        run: sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' coverage.xml
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
