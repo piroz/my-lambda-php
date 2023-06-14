@@ -44,7 +44,7 @@ jobs:
         working-directory: ./laravel
         run: cat coverage.xml
 
-      - name debug out1
+      - name: debug out1
         shell: bash
         working-directory: ./laravel
         run: echo $GITHUB_WORKSPACE
