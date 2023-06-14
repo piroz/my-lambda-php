@@ -49,6 +49,11 @@ jobs:
         working-directory: ./laravel
         run: echo $GITHUB_WORKSPACE
 
+      - name: debug out11
+        shell: bash
+        working-directory: ./laravel
+        run: ls -l
+
       - name: Fix code coverage paths
         shell: bash
         working-directory: ./laravel
