@@ -39,10 +39,20 @@ jobs:
         working-directory: ./laravel
         run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
 
+      - name: debug out
+        shell: bash
+        working-directory: ./laravel
+        run: cat coverage.xml
+
       - name: Fix code coverage paths
         shell: bash
         working-directory: ./laravel
-        run: sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' coverage.xml
+        run: sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/laravel/@g' coverage.xml
+
+      - name: debug out2
+        shell: bash
+        working-directory: ./laravel
+        run: cat coverage.xml
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
