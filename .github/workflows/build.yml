@@ -40,12 +40,10 @@ jobs:
 
       - name: debug out
         shell: bash
-        working-directory: ./laravel
         run: cat coverage.xml
 
       - name: debug out1
         shell: bash
-        working-directory: ./laravel
         run: echo $GITHUB_WORKSPACE
 
       - name: debug out11
@@ -55,12 +53,10 @@ jobs:
 
       - name: Fix code coverage paths
         shell: bash
-        working-directory: ./laravel
         run: sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace@g' coverage.xml
 
       - name: debug out2
         shell: bash
-        working-directory: ./laravel
         run: cat coverage.xml
 
       - name: SonarCloud Scan
