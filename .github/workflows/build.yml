@@ -36,8 +36,7 @@ jobs:
 
       - name: Run tests with phpunit/phpunit
         shell: bash
-        working-directory: ./laravel
-        run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
+        run: php ./laravel/vendor/bin/phpunit --configuration ./laravel/phpunit.xml  --coverage-clover=coverage.xml
 
       - name: debug out
         shell: bash
