@@ -1,7 +1,5 @@
 <?php
 
-// @Generated
-
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;

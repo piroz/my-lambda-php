@@ -1,7 +1,5 @@
 <?php
 
-// @Generated
-
 namespace App\Providers;
 
 use Illuminate\Auth\Events\Registered;

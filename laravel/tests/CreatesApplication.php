@@ -1,7 +1,5 @@
 <?php
 
-// @Generated
-
 namespace Tests;
 
 use Illuminate\Contracts\Console\Kernel;

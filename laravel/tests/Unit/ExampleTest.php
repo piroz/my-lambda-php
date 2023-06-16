@@ -1,7 +1,5 @@
 <?php
 
-// @Generated
-
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
